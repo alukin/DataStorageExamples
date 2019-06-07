@@ -44,7 +44,7 @@ public class TestRunner {
             u.setCreatedBy("TestRunner");
             u.setUserId(i);
             u.setEmail("email"+i+"@test.com");
-            u.setUsername("user"+1);
+            u.setUsername("user"+i);
             u.setPasswdHash(""+i);
             Userdetails ud = new Userdetails(i);
             ud.setFirstName("firstName"+i);
