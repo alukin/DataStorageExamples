@@ -1,0 +1,5 @@
+
+CREATE USER 'app'@'localhost' IDENTIFIED BY 'qwerty';
+GRANT ALL PRIVILEGES ON *.* TO 'app'@'localhost' WITH GRANT OPTION;
+CREATE USER 'app'@'%' IDENTIFIED BY 'qwerty';
+GRANT ALL PRIVILEGES ON *.* TO 'app'@'%' WITH GRANT OPTION;

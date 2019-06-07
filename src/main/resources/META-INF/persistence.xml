@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="ua.cn.al.teach_JPAexample_PG" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>ua.cn.al.teach.daexmpl.model.Loan</class>
+    <class>ua.cn.al.teach.daexmpl.model.BookExamplar</class>
+    <class>ua.cn.al.teach.daexmpl.model.Userdetails</class>
+    <class>ua.cn.al.teach.daexmpl.model.Appuser</class>
+    <class>ua.cn.al.teach.daexmpl.model.Ugroup</class>
+    <class>ua.cn.al.teach.daexmpl.model.Book</class>
+    <class>ua.cn.al.teach.daexmpl.model.Author</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/app2"/>
+      <property name="javax.persistence.jdbc.user" value="app"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="qwerty"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="ua.cn.al.teach_JPAexample_MARIA" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>ua.cn.al.teach.daexmpl.model.Loan</class>
+    <class>ua.cn.al.teach.daexmpl.model.BookExamplar</class>
+    <class>ua.cn.al.teach.daexmpl.model.Userdetails</class>
+    <class>ua.cn.al.teach.daexmpl.model.Appuser</class>
+    <class>ua.cn.al.teach.daexmpl.model.Ugroup</class>
+    <class>ua.cn.al.teach.daexmpl.model.Book</class>
+    <class>ua.cn.al.teach.daexmpl.model.Author</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mariabd://localhost:3306/app2"/>
+      <property name="javax.persistence.jdbc.user" value="app"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="qwerty"/>
+    </properties>
+  </persistence-unit>
+</persistence>
