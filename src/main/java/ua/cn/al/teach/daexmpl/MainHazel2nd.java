@@ -22,7 +22,7 @@ import ua.cn.al.teach.daexmpl.service.UserService;
  *
  * @author al
  */
-public class MainHazel {
+public class MainHazel2nd {
 
     /**
      * @param args the command line arguments
@@ -42,7 +42,7 @@ public class MainHazel {
         UserService userService = new UserServiceHazelImpl(instance);
         
         TestRunner tr = new TestRunner(booksService, userService);
-        tr.go();
+        tr.finderByNamesAndPrint();
         System.out.println("Press Enter to shutdown");
         try {
             System.in.read();

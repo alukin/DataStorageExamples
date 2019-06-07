@@ -80,4 +80,18 @@ public class TestRunner {
       userService.deleteAll();
       return System.currentTimeMillis()-start;  
     }
+
+    public Long finderByNamesAndPrint() {
+        Long start = System.currentTimeMillis();
+        List<Appuser> ul = userService.findUserByName("user%");
+        for(Appuser u:ul){
+           System.out.println(u.getUsername()); 
+        }
+        List<Ugroup> gl = userService.findGroupByName("group%");
+        for(Ugroup g: gl){
+           System.out.println(g.getGroupName()); 
+        }        
+        System.out.println("Found users:"+ul.size()+" groups: "+gl.size());
+        return System.currentTimeMillis()-start; 
+    }
 }

@@ -9,7 +9,10 @@ import com.hazelcast.config.Config;
 import com.hazelcast.config.XmlConfigBuilder;
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
+import java.io.IOException;
 import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import ua.cn.al.teach.daexmpl.hazel.BooksServiceHazelImpl;
 import ua.cn.al.teach.daexmpl.hazel.UserServiceHazelImpl;
 import ua.cn.al.teach.daexmpl.hazel.UserServiceHazelTXImpl;
@@ -41,6 +44,11 @@ public class MainHazelTX {
         
         TestRunner tr = new TestRunner(booksService, userService);
         tr.go();
+        System.out.println("Press Enter to shutdown");
+        try {
+            System.in.read();
+        } catch (IOException ex) {
+        }
         instance.shutdown();
         
     }
